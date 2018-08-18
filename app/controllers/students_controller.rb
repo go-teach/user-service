@@ -22,6 +22,13 @@ class StudentsController < ApplicationController
         json_response(response)
       end
 
+      def logout
+        response = Hash.new
+        response[:success] = true
+        
+        json_response(response)
+      end
+
       def register
         @student = Student.create!(student_params)
 

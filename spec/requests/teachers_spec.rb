@@ -68,7 +68,7 @@ RSpec.describe 'Teachers API', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post '/teachers', params: { full_namea: 'Foobar' } }
+      before { post '/teachers', params: { full_name: 'Foobar' } }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)

@@ -50,12 +50,19 @@ class TeachersController < ApplicationController
         @teacher.destroy
         head :no_content
       end
+
+      def logout
+        response = Hash.new
+        response[:success] = true
+        
+        json_response(response)
+      end
     
       private
     
       def teacher_params
         # whitelist params
-        params.permit(:full_name, :username,:address, :subject, :description, :phone_number)
+        params.permit(:full_name, :password, :username,:address, :subject, :description, :phone_number)
         
       end
     
