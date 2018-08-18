@@ -25,6 +25,9 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  # database: dfhgf410klj5nr
-  url: postgres://gbicipimukatcp:a36620b20262372ec1e0cea877805ec971ace058c8ec22bce546bfe00d77561d@ec2-54-235-94-36.compute-1.amazonaws.com:5432/dfhgf410klj5nr
+  database: dfhgf410klj5nr
+  username: gbicipimukatcp
+  password: a36620b20262372ec1e0cea877805ec971ace058c8ec22bce546bfe00d77561d
+  host: ec2-54-235-94-36.compute-1.amazonaws.com
+  port: 5432
   
