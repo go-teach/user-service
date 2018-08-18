@@ -53,7 +53,7 @@ RSpec.describe 'Teachers API', type: :request do
   # Test suite for POST /teachers
   describe 'POST /teachers' do
     # valid payload
-    let(:valid_attributes) { { full_name: 'Learn Elm', phone_number: '1' , username: 'A', address: 'A', subject: 'A', description: 'A'} }
+    let(:valid_attributes) { { full_name: 'Learn Elm', password: '33',phone_number: '1' , username: 'A', address: 'A', subject: 'A', description: 'A'} }
 
     context 'when the request is valid' do
       before { post '/teachers', params: valid_attributes }
@@ -68,7 +68,7 @@ RSpec.describe 'Teachers API', type: :request do
     end
 
     context 'when the request is invalid' do
-      before { post '/teachers', params: { full_name: 'Foobar' } }
+      before { post '/teachers', params: { full_namea: 'Foobar' } }
 
       it 'returns status code 422' do
         expect(response).to have_http_status(422)

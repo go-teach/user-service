@@ -28,16 +28,16 @@ class TeachersController < ApplicationController
       def register
         @teacher = Teacher.create!(teacher_params)
         params = {'username' => @teacher.username}
-        x = Net::HTTP.post_form(URI.parse('http://www.go-teach-balance.herokuapp.com/balances'), params)
-        puts x.body
+        x = Net::HTTP.post_form(URI.parse('http://go-teach-balance.herokuapp.com/balances'), params)
+        
         json_response(@teacher, :created)
         
       end
     
       # POST /teacher
       def create
-        # @teacher = Teacher.create!(teacher_params)
-        # json_response(@teacher, :created)
+        @teacher = Teacher.create!(teacher_params)
+        json_response(@teacher, :created)
       end
     
       # GET /teacher/:id
