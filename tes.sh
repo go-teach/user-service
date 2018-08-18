@@ -1,0 +1,8 @@
+# GET /todos
+http :3000/todos
+# POST /todos
+http POST :3000/todos title=Mozart created_by=1
+# PUT /todos/:id
+http PUT :3000/todos/1 title=Beethoven
+# DELETE /todos/:id
+http DELETE :3000/todos/1
