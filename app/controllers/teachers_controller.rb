@@ -1,3 +1,6 @@
+require "uri"
+require "net/http"
+
 class TeachersController < ApplicationController
     before_action :set_teacher, only: [:show, :update, :destroy]
     
@@ -24,8 +27,11 @@ class TeachersController < ApplicationController
 
       def register
         @teacher = Teacher.create!(teacher_params)
-
+        params = {'username' => @teacher.username}
+        x = Net::HTTP.post_form(URI.parse('http://go-teach-balance.herokuapp.com/balances'), params)
+        
         json_response(@teacher, :created)
+        
       end
     
       # POST /teacher
