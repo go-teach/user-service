@@ -1,4 +1,4 @@
-# Ruby CircleCI 2.0 configuration file
+  # Ruby CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-ruby/ for more details
 #
@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-        - image: circleci/ruby:2.5.1-node-browsers
+        - image: circleci/ruby:2.5.1-stretch-node-browsers
       
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
