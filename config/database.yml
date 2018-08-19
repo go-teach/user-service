@@ -12,7 +12,11 @@ default: &default
 development:
   <<: *default
   adapter: postgresql
-  database: userMicroservicesDevelopment
+  database: dfhgf410klj5nr
+  username: gbicipimukatcp
+  password: a36620b20262372ec1e0cea877805ec971ace058c8ec22bce546bfe00d77561d
+  host: ec2-54-235-94-36.compute-1.amazonaws.com
+  port: 5432
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -30,4 +34,3 @@ production:
   password: a36620b20262372ec1e0cea877805ec971ace058c8ec22bce546bfe00d77561d
   host: ec2-54-235-94-36.compute-1.amazonaws.com
   port: 5432
-  
